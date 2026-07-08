@@ -111,7 +111,7 @@ To build this project, we leveraged a modern machine learning and web developmen
 
 ---
 
-## 5. Interviewer Q&A Prep (How to Impress)
+## 5. Interviewer Q&A Prep
 
 ### Q: Why did you combine CNN and ViT branches?
 * **Answer:** CNNs are naturally biased toward local features due to the sliding window kernel (translational invariance). They are great at detecting micro-textures and local blending borders. Vision Transformers (ViT) process the image as patches and calculate global attention, capturing structural inconsistencies across the entire face (like uneven lighting or eye-to-chin ratio). Combining both ensures we capture both local and global artifacts.
