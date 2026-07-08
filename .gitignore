@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+
+# Large Model Checkpoints
+outputs/checkpoints/
+*.pth
+*.pt
+
+# Preprocessed Data & Temp files (too large for GitHub)
+data/preprocessed/
+data/temp_inference/
+outputs/logs/
+outputs/evaluation/gradcam_*.png
+outputs/evaluation/prediction_gradcam.png
+outputs/evaluation/confusion_matrix.png
+outputs/evaluation/metrics.json
+
+# IDE Configs
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Frontend dependencies and builds
+frontend/node_modules/
+frontend/dist/
+frontend/local.env

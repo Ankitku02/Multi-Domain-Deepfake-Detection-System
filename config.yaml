@@ -1,0 +1,33 @@
+# Multi-Domain Deepfake Detection System Configuration
+
+paths:
+  raw_dir: "data/raw_videos"
+  preprocessed_dir: "data/preprocessed"
+  metadata_csv: "data/metadata.csv"
+  checkpoint_dir: "outputs/checkpoints"
+  log_dir: "outputs/logs"
+  eval_dir: "outputs/evaluation"
+
+preprocessing:
+  frames_per_video: 5          # Number of frames to extract per video
+  face_size: [224, 224]        # Resized face image dimensions (height, width)
+
+model:
+  cnn_name: "efficientnet_b0"  # CNN branch model name
+  cnn_feature_dim: 1280        # Feature output dimension from CNN
+  vit_name: "vit_base_patch16_224" # ViT branch model name
+  vit_feature_dim: 768         # Feature output dimension from ViT
+  freq_feature_dim: 128        # Output size of frequency branch
+  fusion_dim: 256              # Common projection space dimension for fusion
+  num_heads: 4                 # Attention heads in the fusion module
+  dropout: 0.3                 # Dropout probability
+
+training:
+  epochs: 5
+  batch_size: 4
+  learning_rate: 0.0001
+  weight_decay: 1e-5
+  val_split: 0.15
+  test_split: 0.15
+  seed: 42
+  num_workers: 0               # Set to 0 for Windows compatibility/safety
